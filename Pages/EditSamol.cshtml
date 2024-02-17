@@ -1,0 +1,14 @@
+﻿@page
+@model Practica1.Pages.EditSamol
+@{
+
+    <form method="post">
+        <p>ID: @Model?.Samolet?.Id</p>
+        <label for="Name">Название самолёта</label>
+        <input asp-for="Samolet.Name" type="text" id="Name" name="Name"><span asp-validation-for="Name"></span>
+        <h1></h1>
+        <label for="Type">Type</label>
+        <input asp-for="Samolet.Type" type="text" id="Type" name="Type"><span asp-validation-for="Type"></span>
+        <button type="submit">Сохранить</button>
+    </form>
+    }

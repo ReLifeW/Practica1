@@ -1,0 +1,28 @@
+﻿@page
+@model Practica1.Pages.SamoletiModel
+@{
+    ViewData["Title"] = "Samoleti page";
+}
+
+<h1>Страница Самолёты</h1>
+<a asp-page="EditSamol" class="btn btn-primary stretched-link">Создать</a>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Samoleti in Model.samoletus)
+        {
+            <tr>
+                <td><a href="EditSamol?id=" +@Samoleti.Id>@Samoleti.Id</a></td>
+                <td>@Samoleti.Name</td>
+                <td>@Samoleti.Type</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
